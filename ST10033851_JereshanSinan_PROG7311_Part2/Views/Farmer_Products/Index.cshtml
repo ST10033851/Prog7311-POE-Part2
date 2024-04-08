@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Identity;
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@{
+    var farmers = ViewBag.Farmers as List<IdentityUser>;
+}
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="Heading">All Farmers</h1>
+
+<div class="module-grid">
+    @if (farmers != null && farmers.Count > 0)
+    {
+        @foreach (var farmer in farmers)
+        {
+            <div class="module-item">
+                <img src="/Images/Image3.png" alt="Module Image">
+                <h3>@Html.DisplayFor(modelItem => farmer.Email)</h3>
+                <!-- Add more details here -->
+                <div class="module-actions">
+                    <a asp-action="Details" asp-route-id="@farmer.Id" class="modify">View Products</a>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <script>
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "You have no farmers employed"
+            });
+        </script>
+    }
+    
+</div>
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: '@TempData["ErrorMessage"]',
+        });
+    </script>
+}
+

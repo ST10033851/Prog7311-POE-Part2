@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ST10033851_JereshanSinan_PROG7311_Part2.Models.Product>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="Heading">All Products</h1>
+
+<div class="header">
+    <label class="control-label">Filter by: </label>
+    <select id="ProductCategoryFilter" class="form-control graph-option">
+        <option value="">-- Select Category --</option>
+        @{
+            List<Product> products = ViewBag.Products as List<Product>;
+
+            if (products != null)
+            {
+                foreach (var product in products)
+                {
+                    <option value="@product.Category">@product.Category</option>
+                }
+            }
+        }
+    </select>
+    <label class="control-label">Start Date: </label>
+    <input type="date" id="StartDateFilter" class="form-control datepicker graph-option">
+    <label class="control-label">End Date: </label>
+    <input type="date" id="EndDateFilter" class="form-control datepicker graph-option">
+</div>
+
+<div class="module-grid">
+    @foreach (var item in Model.OrderByDescending(value => value.ProductName))
+    {
+        <div class="module-item" data-product-category="@item.Category" data-production-date="@item.ProductionDate">
+            <img src="/Images/Image3.png" alt="Module Image">
+            <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3>
+            <p>Category: @Html.DisplayFor(modelItem => item.Category)</p>
+            <p>Production Date: @Html.DisplayFor(modelItem => item.ProductionDate.Date)</p>
+            <p>Stock Available: @Html.DisplayFor(modelItem => item.StockAvailable)</p>
+        </div>
+    }
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#ProductCategoryFilter').change(function () {
+            var selectedCategory = $(this).val();
+
+            if (selectedCategory) {
+                // Hide all rows and show only those matching the selected module code
+                $('.module-item').hide();
+                $('.module-item').filter('[data-product-category="' + selectedCategory + '"]').show();
+            } else {
+                // If no module code is selected, show all rows
+                $('.module-item').show();
+            }
+        });
+    });
+
+    $('#DateRangeFilter').click(function () {
+        var startDate = $('#StartDateFilter').val();
+        var endDate = $('#EndDateFilter').val();
+
+        // Hide all rows and show only those within the selected date range
+        $('.module-item').hide();
+        $('.module-item').each(function () {
+            var productionDate = $(this).data('production-date');
+            if (productionDate >= startDate && productionDate <= endDate) {
+                $(this).show();
+            }
+        });
+    });
+</script>

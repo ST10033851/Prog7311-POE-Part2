@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ST10033851_JereshanSinan_PROG7311_Part2.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="Heading">Your Products</h1>
+
+<a asp-action="Create" class="arrow">
+    <span class="Create-Link">
+        <span>
+            <span>&#11153;&nbsp;</span>
+        </span>
+        Create new product
+    </span>
+</a>
+<div class="module-grid">
+    @foreach (var item in Model)
+    {
+        <div class="module-item">
+            <img src="/Images/Image3.png" alt="Module Image">
+            <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3>
+            <p>Category:        @Html.DisplayFor(modelItem => item.Category)</p>
+            <p>Production Date: @Html.DisplayFor(modelItem => item.ProductionDate.Date)</p>
+            <p>Stock Available:    @Html.DisplayFor(modelItem => item.StockAvailable)</p>
+            <!-- Add more details here -->
+            <div class="module-actions">
+                <a asp-action="Delete" asp-route-id="@item.ID" class="modify">Delete</a>
+            </div>
+        </div>
+    }
+</div>
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: '@TempData["ErrorMessage"]',
+        });
+    </script>
+}
