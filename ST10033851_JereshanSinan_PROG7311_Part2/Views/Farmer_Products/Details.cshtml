@@ -33,7 +33,7 @@
     @foreach (var item in Model.OrderByDescending(value => value.ProductName))
     {
         <div class="module-item" data-product-category="@item.Category" data-production-date="@item.ProductionDate">
-            <img src="/Images/Image3.png" alt="Product Image">
+            <img src="/Images/vegetables.png" alt="Product Image">
             <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3>
             <p>Category: @Html.DisplayFor(modelItem => item.Category)</p>
             <p>Production Date: @Html.DisplayFor(modelItem => item.ProductionDate.Date)</p>
