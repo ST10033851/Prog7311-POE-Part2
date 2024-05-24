@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sLmmgMm8JGexzmoFDYOxoNCx4PEGxJljPJofuy6vJ2aktHsMuAIYuU9pekwUN27AfvuvP3j/7CpC3EshzipxmQ==",
+  "dgSpecHash": "JcqzsPtlRNyG9Wfej335vL9BWiZ30olIgdVKVXvbTgCr5V7joFAbO5KmCoD0+Viy6VQS9fnv1FGwvV7NBCK/RQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj",
+  "projectFilePath": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\test\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\test\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

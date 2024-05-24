@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj": {}
+    "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj": {
+    "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj",
+        "projectUniqueName": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj",
         "projectName": "ST10033851_JereshanSinan_PROG7311_Part2",
-        "projectPath": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj",
+        "projectPath": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\ST10033851_JereshanSinan_PROG7311_Part2.csproj",
         "packagesPath": "C:\\Users\\test\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\ST10033851_JereshanSinan_PROG7311_Part2\\obj\\",
+        "outputPath": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\test\\AppData\\Roaming\\NuGet\\NuGet.Config",

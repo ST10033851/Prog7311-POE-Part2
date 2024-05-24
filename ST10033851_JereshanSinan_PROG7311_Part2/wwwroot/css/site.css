@@ -83,10 +83,9 @@ body {
     max-width: 700px;
     height: 500px;
     margin: 0 auto;
-    background: rgba( 255, 255, 255, 0.45 );
+    color:black;
+    background: #fff;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 7px );
-    -webkit-backdrop-filter: blur( 7px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin-top: 100px;
@@ -247,7 +246,7 @@ body {
 /*modules page styles*/
 .module-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -255,13 +254,22 @@ body {
     padding: 10px;
     background: white;
     border-radius: 10px;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
     transition: transform 0.2s;
     color: Black;
 }
+    .module-item h3{
+        margin-top:10px;
+        font-size:17px;
+    }
 
-.module-item h3, .module-actions{
-    text-align:center;
-}
+
+    .module-item h3, .module-actions {
+        text-align: center;
+    }
 
     .module-item:hover {
         cursor: pointer;
@@ -270,14 +278,9 @@ body {
     }
 
     .module-item img {
-        width: 220px;
-        height: 200px;
-    }
+        width: 150px;
+        height: 150px;
 
-    .module-item p{
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 20px;
     }
 
 .module-actions {
@@ -583,10 +586,6 @@ body.dark .login-button {
 }
 
 
-
-
-/*graph view styles*/
-
 .header {
     display: flex;
     align-items: center;
@@ -613,6 +612,10 @@ body.dark .login-button {
 
 #ID {
     margin-left: 10px;
+}
+
+.filter-button{
+    width:200px;
 }
 
 .containers {

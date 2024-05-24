@@ -9,7 +9,7 @@
 <div class="header">
     <label class="control-label">Filter by: </label>
     <select id="ProductCategoryFilter" class="form-control graph-option">
-        <option value="">-- Select Category --</option>
+        <option value="">Select Category</option>
         @{
             List<Product> products = ViewBag.Products as List<Product>;
 
@@ -26,13 +26,14 @@
     <input type="date" id="StartDateFilter" class="form-control datepicker graph-option">
     <label class="control-label">End Date: </label>
     <input type="date" id="EndDateFilter" class="form-control datepicker graph-option">
+    <button id="DateRangeFilterButton" class="btn btn-primary filter-button">Filter by date</button>
 </div>
 
 <div class="module-grid">
     @foreach (var item in Model.OrderByDescending(value => value.ProductName))
     {
         <div class="module-item" data-product-category="@item.Category" data-production-date="@item.ProductionDate">
-            <img src="/Images/Image3.png" alt="Module Image">
+            <img src="/Images/Image3.png" alt="Product Image">
             <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3>
             <p>Category: @Html.DisplayFor(modelItem => item.Category)</p>
             <p>Production Date: @Html.DisplayFor(modelItem => item.ProductionDate.Date)</p>
@@ -57,19 +58,36 @@
                 $('.module-item').show();
             }
         });
-    });
 
-    $('#DateRangeFilter').click(function () {
-        var startDate = $('#StartDateFilter').val();
-        var endDate = $('#EndDateFilter').val();
+        $('#DateRangeFilterButton').click(function () {
+            var startDate = $('#StartDateFilter').val();
+            var endDate = $('#EndDateFilter').val();
 
-        // Hide all rows and show only those within the selected date range
-        $('.module-item').hide();
-        $('.module-item').each(function () {
-            var productionDate = $(this).data('production-date');
-            if (productionDate >= startDate && productionDate <= endDate) {
-                $(this).show();
+            if (startDate && endDate) {
+                filterByDateRange(startDate, endDate);
+            } else {
+                // Handle error or show all items if both dates are not selected
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Please enter both start and end date to filter',
+                });
             }
         });
+
+        function filterByDateRange(startDate, endDate) {
+            // Convert date strings to Date objects for comparison
+            var startDateTime = new Date(startDate);
+            var endDateTime = new Date(endDate);
+
+            // Hide all rows and show only those within the selected date range
+            $('.module-item').hide().each(function () {
+                var productionDate = new Date($(this).data('production-date'));
+
+                if (productionDate >= startDateTime && productionDate <= endDateTime) {
+                    $(this).show();
+                }
+            });
+        }
     });
 </script>

@@ -13,10 +13,12 @@
 <div class="module-grid">
     @if (farmers != null && farmers.Count > 0)
     {
-        @foreach (var farmer in farmers)
+        var orderedFarmers = farmers.OrderBy(farmer => farmer.Email);
+
+        foreach (var farmer in orderedFarmers)
         {
             <div class="module-item">
-                <img src="/Images/Image3.png" alt="Module Image">
+                <img src="/Images/user.png" alt="Module Image">
                 <h3>@Html.DisplayFor(modelItem => farmer.Email)</h3>
                 <!-- Add more details here -->
                 <div class="module-actions">
@@ -25,6 +27,7 @@
             </div>
         }
     }
+
     else
     {
         <script>

@@ -7,32 +7,42 @@
 <h1>Create a product</h1>
 
 <hr />
-<div>
-    <a asp-action="Index" class= "BackToList">Back to List</a>
-</div>
+
 <div class="FormContainer">
+    <div>
+        <a asp-action="Index" class="BackToList">Back to List</a>
+    </div>
     <div class="CenterContent">
         <div>
             <section>
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
-                        <label asp-for="ProductName" class="control-label"></label>
+                        <label asp-for="ProductName" class="control-label">Product name</label>
                         <input asp-for="ProductName" class="form-control" />
                         <span asp-validation-for="ProductName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Category" class="control-label"></label>
-                        <input asp-for="Category" class="form-control" />
+                        <label asp-for="Category" class="control-label">Category</label>
+                        <select asp-for="Category" class="form-control">
+                            <option value="">-- Select Category --</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Carbohydrates">Carbohydrates</option>
+                            <option value="Proteins">Proteins</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Oils and Solid Fats">Oils and Solid Fats</option>
+                            <option value="Beverages">Beverages</option>
+                        </select>
                         <span asp-validation-for="Category" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="ProductionDate" class="control-label"></label>
+                        <label asp-for="ProductionDate" class="control-label">Production date</label>
                         <input asp-for="ProductionDate" class="form-control" />
                         <span asp-validation-for="ProductionDate" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="StockAvailable" class="control-label"></label>
+                        <label asp-for="StockAvailable" class="control-label">Stock available</label>
                         <input asp-for="StockAvailable" class="form-control" />
                         <span asp-validation-for="StockAvailable" class="text-danger"></span>
                     </div>
