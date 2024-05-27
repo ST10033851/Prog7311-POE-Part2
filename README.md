@@ -1,4 +1,4 @@
-# GreenFields - .NET Core Web App
+# Agri-Energy Connect - .NET Core Web App
 
 ## Table of Contents
 1. [Environment Setup](#environment-setup)
@@ -57,6 +57,16 @@
 - Start the Application
 
 - Click the Run button in Visual Studio (F5 or Ctrl+F5).
+
+Credentials:
+
+Employee email: Employee1@gmail.com
+
+Employee Password: Password1@
+
+Farmer email: Farmer1@gmail.com 
+
+Farmer Password: Password1@
 
 ## Functions and User Roles
 
