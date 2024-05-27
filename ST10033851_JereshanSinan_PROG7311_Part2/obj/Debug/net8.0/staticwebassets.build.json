@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9uV3wI79x7k45WxHQK/fSV0HqL4OW51wG6lucDHHSqs=",
+  "Hash": "xvuHCShrWInkiWNo/tEYOV7XcIz1aOZLDy84s+h7UkQ=",
   "Source": "ST10033851_JereshanSinan_PROG7311_Part2",
   "BasePath": "_content/ST10033851_JereshanSinan_PROG7311_Part2",
   "Mode": "Default",
@@ -1326,6 +1326,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Michroma-Regular.ttf"
+    },
+    {
+      "Identity": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\wwwroot\\Images\\MPLUSRounded1c-Regular.ttf",
+      "SourceId": "ST10033851_JereshanSinan_PROG7311_Part2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\wwwroot\\",
+      "BasePath": "_content/ST10033851_JereshanSinan_PROG7311_Part2",
+      "RelativePath": "Images/MPLUSRounded1c-Regular.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\MPLUSRounded1c-Regular.ttf"
     },
     {
       "Identity": "C:\\Users\\test\\Desktop\\VC modules\\PROG7311\\New folder\\ST10033851_JereshanSinan_PROG7311_Part2\\wwwroot\\Images\\user.png",

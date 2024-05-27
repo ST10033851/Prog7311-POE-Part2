@@ -14,13 +14,12 @@
     @if (farmers != null && farmers.Count > 0)
     {
         var orderedFarmers = farmers.OrderBy(farmer => farmer.Email);
-
+        //Displays the farmers from the Viewbag.Farmers
         foreach (var farmer in orderedFarmers)
         {
             <div class="module-item">
                 <img src="/Images/user.png" alt="Module Image">
                 <h3>@Html.DisplayFor(modelItem => farmer.Email)</h3>
-                <!-- Add more details here -->
                 <div class="module-actions">
                     <a asp-action="Details" asp-route-id="@farmer.Id" class="modify">View Products</a>
                 </div>
@@ -30,6 +29,7 @@
 
     else
     {
+        //sweetalert2.github.io. n.d. SweetAlert2. [online] Available at: https://sweetalert2.github.io.[Accessed 1 May 2024]
         <script>
             Swal.fire({
                 icon: "error",

@@ -1,16 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<!--Freepik. (n.d.). 3d Illustration Images - Free Download on Freepik. [online]
-    Available at: https://www.freepik.com/free-photos-vectors/3d-illustration [Accessed 12 Oct. 2023].
+<!--Freepik. n.d. 3d Illustration Images - Free Download on Freepik. [online]
+    Available at: https://www.freepik.com/free-photos-vectors/3d-illustration [Accessed 1 May. 2024].
 ‌-->
 <div class="text-middle-left">
     <h1 class="HomeHeading">Green Fields</h1>
     <a> <p>Welcome to Green Fields: Where Product Management Meets Ease and Efficiency</p> </a>
 </div>
 
+
 @if (TempData.ContainsKey("SuccessMessage"))
 {
+    //Displays a success message when an employee registers a new user
     <script>
         Swal.fire({
             icon: 'success',

@@ -5,6 +5,9 @@ using ST10033851_JereshanSinan_PROG7311_Part2.Data;
 using ST10033851_JereshanSinan_PROG7311_Part2.Models;
 using System.Data;
 
+//www.tutorialsteacher.com. n.d. ViewBag in ASP.NET MVC. [online]
+//Available at: https://www.tutorialsteacher.com/mvc/viewbag-in-asp.net-mvc. [Accessed 1 May 2024].‌
+
 namespace ST10033851_JereshanSinan_PROG7311_Part2.Controllers
 {
     [Authorize(Roles = "Employee")]
@@ -20,13 +23,14 @@ namespace ST10033851_JereshanSinan_PROG7311_Part2.Controllers
         // GET: Farmer_Products
         public async Task<IActionResult> Index()
         {
+            //Uses LINQ to query all users that have the 'Farmer' role and initializes it as 'farmers'
             var farmers = (from userRole in _context.UserRoles
                            join user in _context.Users on userRole.UserId equals user.Id
                            join role in _context.Roles on userRole.RoleId equals role.Id
                            where role.Name == "Farmer"
                            select user).ToList();
 
-            // Pass the list of farmers to the ViewBag, making it available to the index view
+            // Parses the list of farmers to the ViewBag, making it available to the index view
             ViewBag.Farmers = farmers;
 
             return _context.Products != null ?
@@ -45,7 +49,6 @@ namespace ST10033851_JereshanSinan_PROG7311_Part2.Controllers
             string idString = id.ToString();
 
             //Retrieves all products that are linked to the farmer id that was clicked by the user
-
             var product = await _context.Products
             .Where(m => m.FarmerID == idString)
             .ToListAsync();

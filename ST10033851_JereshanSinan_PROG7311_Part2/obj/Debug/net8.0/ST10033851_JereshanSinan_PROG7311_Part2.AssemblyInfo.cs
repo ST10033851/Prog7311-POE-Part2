@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ST10033851_JereshanSinan_PROG7311_Part2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4466c950c0a397640a2facafe0accad55cce109")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76c3d626254e4a0bcc7ae9725aaf67ed35fac9d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ST10033851_JereshanSinan_PROG7311_Part2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ST10033851_JereshanSinan_PROG7311_Part2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

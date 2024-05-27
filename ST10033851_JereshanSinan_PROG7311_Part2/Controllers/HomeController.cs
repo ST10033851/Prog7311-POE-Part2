@@ -2,6 +2,8 @@
 using ST10033851_JereshanSinan_PROG7311_Part2.Models;
 using System.Diagnostics;
 
+
+//All methods here were auto generated
 namespace ST10033851_JereshanSinan_PROG7311_Part2.Controllers
 {
     public class HomeController : Controller

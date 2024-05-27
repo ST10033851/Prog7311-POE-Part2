@@ -11,6 +11,9 @@ using Microsoft.EntityFrameworkCore;
 using ST10033851_JereshanSinan_PROG7311_Part2.Data;
 using ST10033851_JereshanSinan_PROG7311_Part2.Models;
 
+//Rick-Anderson 2023. Claims-based authorization in ASP.NET Core.//[online] learn.microsoft.com.
+//Available at: https://learn.microsoft.com/en-us/aspnet/core/security/authorization/claims?view=aspnetcore-8.0 [Accessed 1 May 2024].‌
+
 namespace ST10033851_JereshanSinan_PROG7311_Part2.Controllers
 {
     [Authorize(Roles = "Farmer")]
@@ -51,6 +54,7 @@ namespace ST10033851_JereshanSinan_PROG7311_Part2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,FarmerID,ProductName,Category,ProductionDate,StockAvailable")] Product product)
         {
+            // Retrieves the user's ID from the claims associated with the current user and sets it as the products farmer id
             product.FarmerID = User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
             _context.Add(product);

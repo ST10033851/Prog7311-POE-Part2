@@ -17,21 +17,23 @@
 <div class="module-grid">
     @foreach (var item in Model)
     {
+        //Displays all the products that the farmer has created
         <div class="module-item">
             <img src="/Images/vegetables.png" alt="Module Image">
             <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3>
             <p>Category:        @Html.DisplayFor(modelItem => item.Category)</p>
             <p>Production Date: @Html.DisplayFor(modelItem => item.ProductionDate.Date)</p>
             <p>Stock Available:    @Html.DisplayFor(modelItem => item.StockAvailable)</p>
-            <!-- Add more details here -->
             <div class="module-actions">
                 <a asp-action="Delete" asp-route-id="@item.ID" class="modify">Delete</a>
             </div>
         </div>
     }
 </div>
+
 @if (TempData.ContainsKey("ErrorMessage"))
 {
+    //Displays a message that a product could not be created
     <script>
         Swal.fire({
             icon: 'error',

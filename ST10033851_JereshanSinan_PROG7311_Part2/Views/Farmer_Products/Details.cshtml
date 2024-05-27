@@ -12,12 +12,16 @@
         <option value="">Select Category</option>
         @{
             List<Product> products = ViewBag.Products as List<Product>;
+            HashSet<string> uniqueCategories = new HashSet<string>();
 
             if (products != null)
             {
                 foreach (var product in products)
                 {
-                    <option value="@product.Category">@product.Category</option>
+                    if (uniqueCategories.Add(product.Category))
+                    {
+                        <option value="@product.Category">@product.Category</option>
+                    }
                 }
             }
         }
